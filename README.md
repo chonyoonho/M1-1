@@ -1,74 +1,64 @@
 # Litecoin Time-Series Analysis
 
-This project analyzes Litecoin (LTC-USD) price trends and market structure using historical daily data. The goal is to identify meaningful patterns in price movement, volatility, and trading volume, then interpret what those patterns imply for market behavior.
+This project analyzes Litecoin (LTC-USD) price behavior over time and interprets the major patterns hidden in the data.
 
-## Project Overview
+The goal is not simply to plot a chart, but to identify what drove the price movement, how volatility changed over time, and what the resulting market signal means for decision-making.
 
-The analysis explores:
+## Overview
 
-- long-term price movement and trend changes
-- major market events such as halving cycles and exchange stress events
-- rolling volatility behavior
+This project examines:
+
+- long-term price trends
+- major event periods such as halving cycles and market stress events
+- rolling volatility
 - monthly return concentration
-- relationship between price and trading volume
+- the relationship between price changes and trading volume
 
 ## Data
 
-- File: `data/litecoin.csv`
+- Data file: `data/litecoin.csv`
 - Period: 2019-01-01 to 2026-09-04
 - Data points: 2,804
-- Fields: Date, Open, High, Low, Close, Volume
+- Columns: Date, Open, High, Low, Close, Volume
 
-## Analysis Script
+## Files
 
-- File: `litecoin_analysis.py`
+- Analysis script: `litecoin_analysis.py`
+- Report: `REPORT.md`
+- Generated visualizations: `images/`
+- Raw dataset: `data/litecoin.csv`
 
-Run the analysis:
+## Run
 
 ```bash
 python litecoin_analysis.py
 ```
 
-This script generates the following charts in the `images/` directory:
+The script generates four charts:
 
-- `01_price_trend.png`
-- `02_volatility.png`
-- `03_monthly_return_heatmap.png`
-- `04_price_volume_zoom.png`
+- `images/01_price_trend.png`
+- `images/02_volatility.png`
+- `images/03_monthly_return_heatmap.png`
+- `images/04_price_volume_zoom.png`
 
-## Report
+## Report Summary
 
-- File: `REPORT.md`
+The report covers:
 
-The report includes the analysis topic, questions, data description, visualizations, insights, and conclusions.
-
-## Repository Structure
-
-```text
-.
-├── README.md
-├── REPORT.md
-├── litecoin_analysis.py
-├── data/
-│   └── litecoin.csv
-├── images/
-│   ├── 01_price_trend.png
-│   ├── 02_volatility.png
-│   ├── 03_monthly_return_heatmap.png
-│   └── 04_price_volume_zoom.png
-└── .gitignore
-```
+- analysis topic and research questions
+- data explanation
+- chart interpretation
+- key insights and conclusions
+- limitations of the analysis
 
 ## Key Findings
 
-- Litecoin showed a strong long-term upward trend over the sample period.
-- Large price moves were accompanied by elevated volatility.
-- Monthly return patterns were uneven, suggesting that a few strong months drove much of the long-term gain.
-- Trading volume increased during turbulent periods but should be interpreted as a context signal rather than a direct cause of price direction.
+- Litecoin delivered strong long-term gains, but with very large drawdowns.
+- Volatility increased sharply during market stress and upward breakout periods.
+- Return patterns were uneven and concentrated in a few months.
+- Trading volume rose with market turbulence, but it acted more as a confirmation signal than a cause.
 
 ## Requirements
-
-Install the dependencies:
 
 ```bash
 pip install pandas numpy matplotlib
@@ -76,4 +66,4 @@ pip install pandas numpy matplotlib
 
 ## License
 
-This project is for educational and portfolio-use purposes.
+This project is distributed under the MIT License.
